@@ -29,7 +29,7 @@ const SaleNft: NextPage = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {saleNfts?.map((v, i) => (
-        <SaleNftCard key={i} tokenId={v} />
+        <SaleNftCard key={i} tokenId={v} getSaleNfts={getSaleNfts} />
       ))}
     </div>
   );
