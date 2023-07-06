@@ -5,7 +5,7 @@ import { NextPage } from "next";
 import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../layout";
 import { redirect } from "next/navigation";
-import NftCard from "@/components/NftCard";
+import MyNftCard from "@/components/MyNftCard";
 
 const MyNft: NextPage = () => {
   const [tokenIds, setTokenIds] = useState<number[]>();
@@ -76,7 +76,7 @@ const MyNft: NextPage = () => {
         </button>
       </div>
       {tokenIds?.reverse().map((v, i) => {
-        return <NftCard key={i} tokenId={v} />;
+        return <MyNftCard key={i} tokenId={v} />;
       })}
     </div>
   );
